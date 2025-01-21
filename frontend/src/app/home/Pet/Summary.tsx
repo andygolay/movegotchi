@@ -8,16 +8,16 @@ export function Summary() {
 
   if (!pet) return null;
 
-  let text = `${pet.name} is doing great! 😄`;
+  let text = `${pet.name} is doing great! 🐳`;
 
   if (pet.energy_points >= 8) {
-    text = `${pet.name} needs some exercise, play with them! 🏃`;
+    text = `${pet.name} needs some exercise, play with them! 🐳`;
   } else if (pet.energy_points >= 6) {
-    text = `${pet.name} is doing great! Play with them! 😄`;
+    text = `${pet.name} is doing great! Play with them! 🐳`;
   } else if (pet.energy_points >= 4) {
-    text = `${pet.name} is getting a little hungry 😕. You should consider feeding them...`;
+    text = `${pet.name} is getting a little hungry 🐳. You should consider feeding them...`;
   } else if (pet.energy_points >= 2) {
-    text = `${pet.name} is really hungry 😖. You should feed them as soon as you can...`;
+    text = `${pet.name} is really hungry 🐳. You should feed them as soon as you can...`;
   } else {
     text = `${pet.name} has died. RIP. 🪦`;
   }

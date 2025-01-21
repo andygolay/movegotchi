@@ -1,15 +1,15 @@
 [package]
-name = "movegotchi"
+name = "aptogotchi"
 version = "1.0.0"
 upgrade_policy = "compatible"
 
 [addresses]
-movegotchi_addr = "_"
+aptogotchi_addr = "_"
 
 [dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "main", subdir = "aptos-move/framework/aptos-framework"}
-AptosTokenObjects = {git = "https://github.com/aptos-labs/aptos-core.git", rev = "main", subdir = "aptos-move/framework/aptos-token-objects"}
+AptosFramework = { git = "https://github.com/movementlabsxyz/aptos-core.git", rev = "main", subdir = "aptos-move/framework/aptos-framework"}
+AptosTokenObjects = {git = "https://github.com/movementlabsxyz/aptos-core.git", rev = "main", subdir = "aptos-move/framework/aptos-token-objects"}
 
 # For use when developing and testing this module
 [dev-addresses]
-movegotchi_addr = "0x100"
+aptogotchi_addr = "0x100"

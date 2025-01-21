@@ -124,7 +124,7 @@ export function Actions({ selectedAction, setSelectedAction }: ActionsProps) {
 
   return (
     <div className="nes-container with-title flex-1 bg-white h-[320px]">
-      <p className="title">Actions</p>
+      <p className="title border border-gray-300">Actions</p>
       <div className="flex flex-col gap-2 justify-between h-full">
         <div className="flex flex-col flex-shrink-0 gap-2 border-b border-gray-300">
           <label>
@@ -167,6 +167,6 @@ export function Actions({ selectedAction, setSelectedAction }: ActionsProps) {
 }
 
 const actionDescriptions: Record<PetAction, string> = {
-  feed: "Feeding your pet will boost its Energy Points...",
-  play: "Playing with your pet will make it happy and consume its Energy Points...",
+  feed: "Feeding your narwhal will boost its Energy Points...",
+  play: "Playing with your narwhal will make it happy and consume its Energy Points...",
 };

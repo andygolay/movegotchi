@@ -32,9 +32,13 @@ export function Mint({ fetchPet }: MintProps) {
           typeArguments: [],
           functionArguments: [
             newName,
+            petParts.background,
             petParts.body,
-            petParts.ear,
-            petParts.face,
+            petParts.mouth,
+            petParts.tusk,
+            petParts.eye,
+            petParts.glasses,
+            petParts.hair,
           ],
         },
       });

@@ -10,7 +10,7 @@ export function NotConnected() {
   const [petParts, setPetParts] = useState<PetParts>(DEFAULT_PET.parts);
 
   const text = useTypingEffect(
-    `Welcome to Aptogotchi! Once you connect your wallet, you'll be able to mint your new on-chain pet. Once minted, you'll be able to feed, play with, and customize your new best friend!`
+    `Welcome to Narwhal Moverz! Once you connect your wallet, you'll be able to mint your new on-chain narwhal. Once minted, you'll be able to feed, play with, and customize your new best friend!`
   );
 
   return (

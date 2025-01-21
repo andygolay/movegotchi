@@ -3,7 +3,7 @@ script {
     // Increasing gotchi's energy point by 2.
     fun feed_gotchi(user: &signer) {
         let energy_points = 1;
-        movegotchi_addr::main::feed(user, energy_points);
-        movegotchi_addr::main::feed(user, energy_points);
+        aptogotchi_addr::main::feed(user, energy_points);
+        aptogotchi_addr::main::feed(user, energy_points);
     }
 }

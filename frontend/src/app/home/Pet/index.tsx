@@ -16,18 +16,26 @@ export interface Pet {
 }
 
 export interface PetParts {
+  background: number,
   body: number;
-  ear: number;
-  face: number;
+  mouth: number;
+  tusk: number;
+  eye: number;
+  glasses: number;
+  hair: number;
 }
 
 export const DEFAULT_PET = {
   name: "Unknown",
   energy_points: 0,
   parts: {
+    background: 0,
     body: 0,
-    ear: 0,
-    face: 0,
+    mouth: 0,
+    tusk: 0,
+    eye: 0,
+    glasses: 0,
+    hair: 0
   },
 };
 

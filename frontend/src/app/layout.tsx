@@ -8,24 +8,24 @@ import { Toaster } from "sonner";
 import { PetProvider } from "@/context/PetContext";
 import "./globals.css";
 
-const kongtext = localFont({
-  src: "./../../public/kongtext.ttf",
-  variable: "--font-kongtext",
+const tondu = localFont({
+  src: "./../../public/Tondu-Beta.ttf",
+  variable: "--font-tondu",
 });
 
 export const metadata: Metadata = {
-  title: "Aptogotchi",
-  description: "Aptogotchi - Your new favorite on-chain pet!",
+  title: "Movegucci",
+  description: "Movegucci - Your new favorite on-chain pet!",
   openGraph: {
-    title: "Aptogotchi",
-    description: "Aptogotchi - Your new favorite on-chain pet!",
-    images: ["/aptogotchi.png"],
+    title: "Movegucci",
+    description: "Movegucci - Your new favorite on-chain pet!",
+    images: ["/Movegucci.png"],
   },
   twitter: {
     card: "summary",
     site: "@Aptos_Network",
-    title: "Aptogotchi",
-    description: "Aptogotchi - Your new favorite on-chain pet!",
+    title: "Movegucci",
+    description: "Narwhal Moverz - Your new favorite on-chain pet!",
     images: ["/aptogotchi.png"],
   },
 };
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           content="Rnm3DL87HNmPncIFwBLXPhy-WGFDXIyplSL4fRtnFsA"
         />
       </head>
-      <body className={kongtext.className}>
+      <body className={tondu.className}>
         <Toaster
           richColors
           position="top-right"
