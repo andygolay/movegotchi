@@ -10,7 +10,7 @@ export function NotConnected() {
   const [petParts, setPetParts] = useState<PetParts>(DEFAULT_PET.parts);
 
   const text = useTypingEffect(
-    `Welcome to Narwhal Moverz! Once you connect your wallet, you'll be able to mint your new on-chain narwhal. Once minted, you'll be able to feed, play with, and customize your new best friend!`
+    `Welcome to Movegotchi, where you'll be able to mint your new on-chain narwhal. Once minted, you'll be able to feed, play with, and customize your new best friend!`
   );
 
   return (
@@ -19,6 +19,7 @@ export function NotConnected() {
       <div className="nes-container is-dark with-title text-sm sm:text-base">
         <p className="title">Welcome</p>
         <p>{text}</p>
+        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeKp6H03FAvY8x569EPqKCxR6m0kB8W-Ewvx35KM-cg1g7m9Q/viewform?usp=header">Get early access!</a></p>
       </div>
     </div>
   );
