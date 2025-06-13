@@ -6,13 +6,13 @@ import { useEffect, useRef } from "react";
 
 export default function Home() {
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative w-screen h-screen overflow-hidden">
       {/* Falling letters background */}
       <FallingLettersBackground />
 
       {/* Content with white background */}
-      <div className="relative z-10 flex sm:justify-center sm:items-center sm:h-screen sm:overflow-hidden">
-        <div className="w-screen sm:w-[1200px] sm:h-[800px] sm:m-auto border-4 border-black border-solid bg-white bg-opacity-80">
+      <div className="relative z-10 flex justify-center items-center h-screen overflow-hidden px-4">
+        <div className=" w-full max-w-[1000px] h-[700px] m-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-2x1 shadow-x1 border-whiteborder-opacity-20 p-6">
           <Header />
           <Body />
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="md:sticky top-0 z-10 flex justify-between items-center md:px-6 py-4 bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-600 shadow-md w-full gap-2">
+    <header className="md:sticky top-0 z-10 flex justify-between items-center md:px-6 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-lg w-full gap-2 text-white rounded-b-xl">
       <h1 className="text-2xl hidden sm:block">Narwhal Moverz</h1>
       <WalletButtons />
     </header>
@@ -79,8 +79,11 @@ function FallingLettersBackground() {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Gold text color
-      ctx.fillStyle = "#ffd700";
+      ctx.fillStyle = "#06b6d4";
       ctx.font = font_size + "px monospace";
+
+
+      
 
       for (let i = 0; i < drops.length; i++) {
         const text = characters[Math.floor(Math.random() * characters.length)];
