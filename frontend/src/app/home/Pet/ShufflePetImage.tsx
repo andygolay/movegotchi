@@ -21,7 +21,7 @@ export function ShufflePetImage({
   petParts: PetParts;
   setPetParts: React.Dispatch<React.SetStateAction<PetParts>>;
 }) {
-  const handleShuffle = () => {
+  const handleShuffle = async () => {
     const randomPetParts = {
       background: Math.floor(Math.random() * Number(NEXT_PUBLIC_BACKGROUND_OPTIONS)),
       body: Math.floor(Math.random() * Number(NEXT_PUBLIC_BODY_OPTIONS)),
