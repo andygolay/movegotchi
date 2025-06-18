@@ -4,7 +4,12 @@ set -e
 
 echo "##### Installing aptos cli dependencies #####"
 sudo apt-get update
-sudo apt-get install libssl-dev
+sudo apt-get install -y wget unzip software-properties-common
+
+echo "##### Installing OpenSSL 1.1 runtime #####"
+sudo add-apt-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install -y libssl1.1
 
 echo "##### Installing aptos cli #####"
 if ! command -v aptos &>/dev/null; then
