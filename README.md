@@ -1,7 +1,7 @@
-### Try Aptogotchi out [here](https://aptogotchi.aptoslabs.com/)
+### Try Movegotchi out [here](https://aptogotchi.aptoslabs.com/)
 
-# Aptogotchi (Beginner)
-Aptogotchi is a simple and fun full-stack, end-to-end dApp demonstrating the basics of how to build a dApp using Move. 
+# Movegotchi (Beginner)
+Movegotchi is a simple and fun full-stack, end-to-end dApp demonstrating the basics of how to build a dApp using Move. 
 
 We introduce the following concepts:
 1. how to create a full-stack dApp 
