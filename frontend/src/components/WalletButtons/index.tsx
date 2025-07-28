@@ -7,6 +7,7 @@ import {
   isRedirectable,
   WalletName,
 } from "@aptos-labs/wallet-adapter-react";
+<<<<<<< HEAD
 import { cn } from "@/utils/styling";
 import { toast } from "sonner";
 
@@ -14,6 +15,19 @@ const buttonStyles = "nes-btn is-primary m-auto sm:m-0 sm:px-4";
 
 export const WalletButtons = () => {
   const { wallets, connected, disconnect, isLoading } = useWallet();
+=======
+
+import { cn } from "@/utils/styling";
+import { toast } from "sonner";
+import React, { useState } from "react";
+
+const buttonStyles = "nes-btn is-primary m-auto sm:m-0 sm:px-4";
+
+
+export const WalletButtons = () => {
+  const { wallets, connected, disconnect, isLoading } = useWallet();
+  const [showModal, setShowModal] = useState(false);
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
 
   const onWalletDisconnectRequest = async () => {
     try {
@@ -39,6 +53,7 @@ export const WalletButtons = () => {
     );
   }
 
+<<<<<<< HEAD
   if (isLoading || !wallets[0]) {
     return (
       <div className={cn(buttonStyles, "opacity-50 cursor-not-allowed")}>
@@ -51,6 +66,59 @@ export const WalletButtons = () => {
 };
 
 const WalletView = ({ wallet }: { wallet: Wallet }) => {
+=======
+
+  if (isLoading || !wallets || wallets.length === 0) {
+    return (
+      <div className={cn(buttonStyles, "opacity-50 cursor-not-allowed")}>Loading...</div>
+    );
+  }
+
+  // Filter wallets to only those that are of type Wallet (not AptosStandardSupportedWallet)
+  const compatibleWallets = wallets.filter((w): w is Wallet => (w as Wallet).readyState !== undefined);
+
+  if (compatibleWallets.length === 0) {
+    return (
+      <div className={cn(buttonStyles, "opacity-50 cursor-not-allowed")}>No compatible wallets found</div>
+    );
+  }
+
+  return (
+    <>
+      <button
+        className={cn(buttonStyles, "hover:bg-blue-700")}
+        onClick={() => setShowModal(true)}
+        style={{ maxWidth: "300px" }}
+      >
+        Connect Wallet
+      </button>
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className="bg-white bg-opacity-80 rounded-xl p-8 shadow-xl relative min-w-[300px] min-h-[150px] flex flex-col items-center"
+            onClick={e => e.stopPropagation()}
+          >
+            <span className="text-lg font-bold mb-4">Connect your wallet</span>
+            <WalletView wallet={compatibleWallets[0]} onConnect={() => setShowModal(false)} />
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+
+const WalletView = ({ wallet, onConnect }: { wallet: Wallet; onConnect?: () => void }) => {
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
   const { connect } = useWallet();
   const isWalletReady =
     wallet.readyState === WalletReadyState.Installed ||
@@ -60,6 +128,10 @@ const WalletView = ({ wallet }: { wallet: Wallet }) => {
   const onWalletConnectRequest = async (walletName: WalletName) => {
     try {
       await connect(walletName);
+<<<<<<< HEAD
+=======
+      if (onConnect) onConnect();
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
     } catch (error) {
       console.warn(error);
       toast.error("Failed to connect wallet. Please try again.");

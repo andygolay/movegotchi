@@ -1,6 +1,10 @@
 "use client";
 
+<<<<<<< HEAD
 import dynamic from "next/dynamic";
+=======
+import { ConnectButton } from "@razorlabs/razorkit";
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
 import { Body } from "./home/Body";
 import { useEffect, useRef } from "react";
 
@@ -12,7 +16,11 @@ export default function Home() {
 
       {/* Content with white background */}
       <div className="relative z-10 flex justify-center items-center h-screen overflow-hidden px-4">
+<<<<<<< HEAD
         <div className=" w-full max-w-[1000px] h-[700px] m-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-2x1 shadow-x1 border-whiteborder-opacity-20 p-6">
+=======
+        <div className=" w-full max-w-[1000px] h-[700px] m-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl shadow-xl border-white border-opacity-20 p-6">
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
           <Header />
           <Body />
         </div>
@@ -21,6 +29,7 @@ export default function Home() {
   );
 }
 
+<<<<<<< HEAD
 function Header() {
   return (
     <header className="md:sticky top-0 z-10 flex justify-between items-center md:px-6 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-lg w-full gap-2 text-white rounded-b-xl">
@@ -44,6 +53,30 @@ const WalletButtons = dynamic(
     ssr: false,
   }
 );
+=======
+
+function Header() {
+  return (
+   <header className="sm:px-4 md:sticky top-0 z-10 flex justify-between items-center md:px-6 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 w-full gap-2 text-white border-2 border-black shadow-[4px_4px_0px_#000000]">
+  <h1 className="text-2xl hidden sm:block">Narwhal Moverz</h1>
+  
+  <ConnectButton className="
+    px-8 py-4
+    font-pixel
+    bg-gradient-to-br from-[#308DEF] to-[#9036EA]
+    text-white 
+    border-2 border-black
+    shadow-[4px_4px_0px_#000000] 
+    hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] 
+    active:translate-x-[2px] active:translate-y-[2px]
+    transition-all"
+  />
+</header>
+  );
+}
+
+
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
 
 function FallingLettersBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

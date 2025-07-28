@@ -15,7 +15,13 @@
     "@aptos-labs/wallet-adapter-react": "^2.1.7",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+<<<<<<< HEAD
     "@radix-ui/react-dialog": "^1.0.5",
+=======
+    "@martianwallet/aptos-wallet-adapter": "^0.0.5",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@razorlabs/razorkit": "^1.1.1",
+>>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
     "autoprefixer": "10.4.14",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.0",
