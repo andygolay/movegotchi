@@ -1,21 +1,16 @@
-<<<<<<< HEAD
-import { WalletProvider } from "@/context/WalletProvider";
-=======
 "use client";
-import { WalletProvider } from "@/context/WalletProvider";
-import { WalletProvider as RazorWalletProvider } from "@razorlabs/razorkit";
->>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { PropsWithChildren } from "react";
-import { GeoTargetly } from "@/utils/GeoTargetly";
-import "nes.css/css/nes.min.css";
-import { Toaster } from "sonner";
+
+import { WalletProvider } from "@/context/WalletProvider";
+import { WalletProvider as RazorWalletProvider } from "@razorlabs/razorkit";
 import { PetProvider } from "@/context/PetContext";
-<<<<<<< HEAD
-=======
+import { GeoTargetly } from "@/utils/GeoTargetly";
+
+import "nes.css/css/nes.min.css";
 import "@razorlabs/razorkit/style.css";
->>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
 import "./globals.css";
 
 const tondu = localFont({
@@ -50,29 +45,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
         />
       </head>
       <body className={tondu.className}>
-        <Toaster
-          richColors
-          position="top-right"
-          toastOptions={{
-            style: {
-              letterSpacing: "0.02em",
-            },
-            className: "toast",
-            duration: 5000,
-          }}
-          closeButton
-          expand={true}
-        />
         <PetProvider>
-<<<<<<< HEAD
-          <WalletProvider>{children}</WalletProvider>
-=======
           <RazorWalletProvider autoConnect={true}>
-            <WalletProvider>
-              {children}
-            </WalletProvider>
+            <WalletProvider>{children}</WalletProvider>
           </RazorWalletProvider>
->>>>>>> 649fa07 (Integrated RazorKit wallet adapter with Nightly support)
         </PetProvider>
         <GeoTargetly />
       </body>
