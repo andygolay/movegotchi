@@ -1,13 +1,6 @@
-"use client";
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { PropsWithChildren } from "react";
-
-import { WalletProvider } from "@/context/WalletProvider";
-import { WalletProvider as RazorWalletProvider } from "@razorlabs/razorkit";
-import { PetProvider } from "@/context/PetContext";
-import { GeoTargetly } from "@/utils/GeoTargetly";
+import ClientProviders from "./ClientProviders";
 
 import "nes.css/css/nes.min.css";
 import "@razorlabs/razorkit/style.css";
@@ -35,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -45,12 +38,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         />
       </head>
       <body className={tondu.className}>
-        <PetProvider>
-          <RazorWalletProvider autoConnect={true}>
-            <WalletProvider>{children}</WalletProvider>
-          </RazorWalletProvider>
-        </PetProvider>
-        <GeoTargetly />
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
