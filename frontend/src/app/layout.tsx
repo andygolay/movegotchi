@@ -1,11 +1,9 @@
-import { WalletProvider } from "@/context/WalletProvider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { PropsWithChildren } from "react";
-import { GeoTargetly } from "@/utils/GeoTargetly";
+import ClientProviders from "./ClientProviders";
+
 import "nes.css/css/nes.min.css";
-import { Toaster } from "sonner";
-import { PetProvider } from "@/context/PetContext";
+import "@razorlabs/razorkit/style.css";
 import "./globals.css";
 
 const tondu = localFont({
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -40,23 +38,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         />
       </head>
       <body className={tondu.className}>
-        <Toaster
-          richColors
-          position="top-right"
-          toastOptions={{
-            style: {
-              letterSpacing: "0.02em",
-            },
-            className: "toast",
-            duration: 5000,
-          }}
-          closeButton
-          expand={true}
-        />
-        <PetProvider>
-          <WalletProvider>{children}</WalletProvider>
-        </PetProvider>
-        <GeoTargetly />
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
