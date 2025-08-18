@@ -1,7 +1,7 @@
 # Movegotchi (Beginner)
 Movegotchi is a simple and fun digital pet / best friend game.
 
-You can play Movegotchi [here](https://movegotchi.vercel.app/) (🚧 work in progress 🚧).
+You can [play Movegotchi here](https://movegotchi.vercel.app/) (🚧 work in progress 🚧).
 
 ---
 
