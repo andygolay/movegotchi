@@ -1,7 +1,7 @@
 ### Try Movegotchi here [here](https://aptogotchi.aptoslabs.com/)
 
 # Movegotchi (Beginner)
-Movegotchi is a simple and fun full-stack, end-to-end dApp demonstrating the basics of how to build a dApp using Move. 
+Movegotchi is a simple and fun digital pet / best friend game.  
 
 We introduce the following concepts:
 1. how to create a full-stack dApp 
