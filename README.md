@@ -1,4 +1,4 @@
-### Try Movegotchi out [here](https://aptogotchi.aptoslabs.com/)
+### Try Movegotchi here [here](https://aptogotchi.aptoslabs.com/)
 
 # Movegotchi (Beginner)
 Movegotchi is a simple and fun full-stack, end-to-end dApp demonstrating the basics of how to build a dApp using Move. 
@@ -9,8 +9,6 @@ We introduce the following concepts:
 2. how to integrate with Petra Wallet/Explorer/ANS and other services.
 2. how to create events and use indexer to get off-chain data.
 3. how to write unit tests for the smart contracts.
-
-This dApp will be used as an educational demo hosted on [Aptos Learn](https://learn.aptoslabs.com/).
 
 You can find more instructions about the Move contract in move/README.md.
 
