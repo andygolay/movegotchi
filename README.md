@@ -1,16 +1,7 @@
 ### Try Movegotchi here [here](https://aptogotchi.aptoslabs.com/)
 
 # Movegotchi (Beginner)
-Movegotchi is a simple and fun digital pet / best friend game.  
-
-We introduce the following concepts:
-1. how to create a full-stack dApp 
-2. how to connect to smart contracts on the Aptos blockchain
-2. how to integrate with Petra Wallet/Explorer/ANS and other services.
-2. how to create events and use indexer to get off-chain data.
-3. how to write unit tests for the smart contracts.
-
-You can find more instructions about the Move contract in move/README.md.
+Movegotchi is a simple and fun digital pet / best friend game.
 
 ---
 
