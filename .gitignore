@@ -41,3 +41,8 @@ next-env.d.ts
 # aptos
 .aptos
 **/move/build
+
+node_modules/
+.next/
+.env*
+dist/
